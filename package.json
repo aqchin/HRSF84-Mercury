@@ -9,18 +9,19 @@
     "node": ">=6.4.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha test/ServerSpec.js --use_strict; pkill -n node;",
     "build": "webpack --watch",
     "start": "node server.js",
     "watch": "nodemon server.js"
   },
   "dependencies": {
-    "normalize.css": "^7.0.0",
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
     "dotenv": "^4.0.0",
     "mongodb": "^2.2.33",
-    "mongoose": "^4.13.2"
+    "mongoose": "^4.13.2",
+    "normalize.css": "^7.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.7.5",
